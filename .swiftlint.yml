@@ -1,0 +1,51 @@
+# SwiftLint installation
+# brew install swiftlint
+
+# Find all the available rules by running:
+# swiftlint rules
+
+# swiftlint will be run automatically during debug builds and errors/warnings
+# will be reported via xCode
+
+# We'll allow todo's
+# nesting can go fairly deep for deserialization so we'll permint it
+# closure parameters can be on the next line because lines can only
+# be 120 characters long
+disabled_rules:
+  - nesting
+  - closure_parameter_position
+  - empty_enum_arguments
+  - unused_optional_binding
+  - todo
+
+function_parameter_count: 6
+
+force_cast: warning
+
+force_try:
+  severity: error
+
+line_length: 200
+
+type_body_length:
+  warning: 1050
+  error: 1100
+
+file_length:
+  warning: 1050
+  error: 1100
+
+vertical_whitespace:
+  max_empty_lines: 4
+
+function_body_length: 120
+cyclomatic_complexity: 20
+
+type_name:
+  min_length: 2
+  max_length:
+    error: 50
+
+identifier_name:
+  min_length: 2
+  allowed_symbols: ["_"]
